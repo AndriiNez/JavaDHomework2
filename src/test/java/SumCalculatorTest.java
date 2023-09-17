@@ -11,27 +11,17 @@ public class SumCalculatorTest {
     }
 
     @Test
-    public void testThatSumWorksCorrectWith1() {
-
-        int actual = sumCal.sum(1);
-
-
-        int expected = 1;
-        Assertions.assertEquals(expected, actual);
+    void testThatSumWorksCorrectWith1() {
+        Assertions.assertEquals(1, sumCal.sum(1));
     }
 
     @Test
-    public void testThatSumWorksCorrectWith3() {
-
-        int actual = sumCal.sum(3);
-
-
-        int expected = 6;
-        Assertions.assertEquals(expected, actual);
+    void testThatSumWorksCorrectWith3() {
+        Assertions.assertEquals(6, sumCal.sum(3));
     }
 
     @Test
-    public void testThatSumWorksCorrectWithZero() {
+    void testThatSumWorksCorrectWithZero() {
         Assertions.assertThrows(IllegalArgumentException.class, () -> {
             sumCal.sum(0);
         });
